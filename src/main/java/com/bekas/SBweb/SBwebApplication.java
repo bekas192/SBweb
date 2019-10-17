@@ -24,6 +24,9 @@ public class SBwebApplication {
          @Override
          public void addCorsMappings(CorsRegistry registry) {
             registry.addMapping("/mahasiswas").allowedOrigins("http://localhost:4200");
+            registry.addMapping("/mahasiswas/create").allowedOrigins("http://localhost:4200");
+            registry.addMapping("/mahasiswas/edit/{id}").allowedOrigins("http://localhost:4200");
+            registry.addMapping("/mahasiswas/{id}").allowedOrigins("http://localhost:4200");
          }
       };
    }

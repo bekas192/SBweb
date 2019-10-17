@@ -1,4 +1,4 @@
-package com.bekas.SBweb.controller;
+ package com.bekas.SBweb.controller;
 
 import com.bekas.SBweb.model.Mahasiswa;
 import com.bekas.SBweb.services.MahasiswaService;
@@ -55,7 +55,7 @@ public class MahasiswaController {
 
     }
 
-    @RequestMapping(value = "/hapus/{id}" , method = RequestMethod.DELETE, produces = MediaType.TEXT_PLAIN_VALUE)
+    @RequestMapping(value = "/{id}" , method = RequestMethod.DELETE, produces = MediaType.TEXT_PLAIN_VALUE)
     public String hapus(@PathVariable Integer id){
          mahasiswaService.hapus(id);
          return "SUCESS";

@@ -23,10 +23,10 @@ public class SBwebApplication {
       return new WebMvcConfigurerAdapter() {
          @Override
          public void addCorsMappings(CorsRegistry registry) {
-            registry.addMapping("/mahasiswas").allowedOrigins("http://localhost:4200");
-            registry.addMapping("/mahasiswas/create").allowedOrigins("http://localhost:4200");
-            registry.addMapping("/mahasiswas/edit/{id}").allowedOrigins("http://localhost:4200");
-            registry.addMapping("/mahasiswas/{id}").allowedOrigins("http://localhost:4200");
+            registry.addMapping("/mahasiswas").allowedOrigins("http://localhost:4200").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD");
+            registry.addMapping("/mahasiswas/create").allowedOrigins("http://localhost:4200").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD");
+            registry.addMapping("/mahasiswas/edit/{id}").allowedOrigins("http://localhost:4200").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD");
+            registry.addMapping("/mahasiswas/{id}").allowedOrigins("http://localhost:4200").allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD");
          }
       };
    }
